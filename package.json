@@ -1,5 +1,5 @@
 {
-  "name": "react-router-logger",
+  "name": "express-mongo-logger",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
