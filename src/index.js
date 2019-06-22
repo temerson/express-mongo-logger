@@ -3,6 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import routes from './routes';
+import models, { connectDb } from './models';
 
 const app = express();
 
@@ -13,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // routes
 app.use('/', routes);
 
-app.listen(3000, () => {
-  console.log(`Example app listening on port ${process.env.PORT}!`);
+connectDb().then(async () => {
+  app.listen(process.env.PORT, () => {
+    console.log(`Example app listening on port ${process.env.PORT}!`);
+  });
 });
