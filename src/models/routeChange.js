@@ -6,6 +6,7 @@ const routeChangeSchema = new mongoose.Schema({
   userId: String,
   route: String,
   timestamp: Date,
+  version: String,
 });
 
 const RouteChange = mongoose.model('RouteChange', routeChangeSchema);
