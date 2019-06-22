@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 
 const routeChangeSchema = new mongoose.Schema({
-  id: { type: String, unique: true },
   agency: String,
   userId: String,
   route: String,
